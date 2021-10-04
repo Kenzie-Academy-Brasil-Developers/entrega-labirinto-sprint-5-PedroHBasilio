@@ -1,0 +1,80 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #222222;
+}
+
+h1{
+    color: #c5c5c5;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+#canva__maze{
+    margin: 0px;
+    padding: 20px;
+    background-color: #4c4c4c;
+    border-radius: 5px;
+}
+
+.maze__line{
+    display: flex;
+}
+.maze__line .cell{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+}
+
+.maze__line .wall{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    background-image: url("./block.png");
+    background-size: cover;
+}
+
+.maze__line .way{
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    /* border: solid black 1px; */
+}
+
+.maze__line .final{
+}
+
+#player{
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+
+#window{
+    width: 125px;
+    margin: 2px;
+    animation: moveSpritesheet 1.5s steps(4) infinite;
+    position: relative;
+    bottom: 28px;
+}
+
+@keyframes moveSpritesheet {
+    from {
+       transform: translate3d(0px,0,0)
+    }
+    to {
+       transform: translate3d(-100%,0,0)
+    }
+}
+
+.msg_box{
+    margin: 0px;
+}
+
+    #msg{
+        color: #c5c5c5;
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+    }
